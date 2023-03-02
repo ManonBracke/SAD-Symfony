@@ -21,8 +21,6 @@ class UserFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
         $slug = new Slugify();
-        $role = $manager->getRepository(Role::class)->findAll();
-        $nbRoles = count($role);
 
         for($i =0 ; $i <=50; $i++){
            $user = new User();
@@ -35,7 +33,7 @@ class UserFixtures extends Fixture
                 ->setUpdatedAt(new \DateTimeImmutable())
                 ->setBirthday($faker->dateTime())
                 ->setIsDesactivated($faker->boolean(10))
-                ->setRole($role[$faker->numberBetween(0, $nbRoles-1)]);
+                ->setRoles(['ROLE_USER']);
            $manager->persist($user);
         }
 
