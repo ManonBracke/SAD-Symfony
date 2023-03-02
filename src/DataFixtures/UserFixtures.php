@@ -33,7 +33,7 @@ class UserFixtures extends Fixture
                 ->setUpdatedAt(new \DateTimeImmutable())
                 ->setBirthday($faker->dateTime())
                 ->setIsDesactivated($faker->boolean(10))
-                ->setRoles(['ROLE_USER']);
+                ->setRoles([$faker->randomElement(['ROLE_USER','ROLE_SUPPORT','ROLE_MODERATOR','ROLE_ADMIN','ROLE_SUPER_ADMIN'])]);
            $manager->persist($user);
         }
 
