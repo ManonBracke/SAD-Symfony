@@ -1,0 +1,7 @@
+api_platform:
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+    enable_swagger_ui: true
+    title: 'SAD API'
+    description: 'API de sea of death'
+    version: '0.1'
