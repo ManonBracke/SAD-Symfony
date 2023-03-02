@@ -12,8 +12,8 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
-                            <a href="{{ path('app_admin_painting') }}">Gestion des peintures</a><br>
-                            <a href="{{ path('new') }}">Ajouter une peinture</a>
+                            <a href="">Gestion des peintures</a><br>
+                            <a href="">Ajouter une peinture</a>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
-                            <a href="{{ path('app_admin_comments') }}">Gestion des commentaires</a><br>
+                            <a href="">Gestion des commentaires</a><br>
                         </div>
                     </div>
                 </div>
@@ -37,11 +37,11 @@
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
-                            <a href="{{ path('app_admin_orders')}}">Gestion des commandes</a><br>
+                            <a href="">Gestion des commandes</a><br>
                         </div>
                     </div>
                 </div>
-                {% if is_granted('ROLE_SUPER_ADMIN') %}
+{#                {% if is_granted('ROLE_SUPER_ADMIN') %}#}
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -50,8 +50,8 @@
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample" style="">
                             <div class="accordion-body">
-                                <a href="{{ path('app_admin_users') }}">Gestion des utilisateurs</a><br>
-                                <a href="{{ path('app_admin_new_users') }}">Ajouter un utilisateur</a><br>
+                                <a href="">Gestion des utilisateurs</a><br>
+                                <a href="">Ajouter un utilisateur</a><br>
                             </div>
                         </div>
                     </div>
@@ -63,12 +63,12 @@
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="">
                             <div class="accordion-body">
-                                <a href="{{ path('app_admin_slider') }}">Gestion des sliders</a><br>
-                                <a href="{{ path('app_admin_slider_new') }}">Ajouter un slider</a>
+                                <a href="">Gestion des sliders</a><br>
+                                <a href="">Ajouter un slider</a>
                             </div>
                         </div>
                     </div>
-            {% endif %}
+{#            {% endif %}#}
                 </div>
         </div>
 

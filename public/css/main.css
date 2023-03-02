@@ -1,107 +1,52 @@
-/* Profil */
-.profile-img {
-    width: 80%;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+@import url("https://fonts.bunny.net/css?family=Nunito");
+.hero {
+  padding-top: 30rem;
+  min-height: 55rem;
 }
 
-.img-avatar {
-    width: 30px;
-    border-radius: 50%;
+.btn-google {
+  background-color: rgb(234, 67, 53) !important;
+  color: #fff !important;
 }
 
-/* Image panier*/
-.img-card{
-    width: 10rem;
-    border-radius: 5%;
+.btn-google:hover {
+  background-color: rgba(234, 67, 53, 0.65) !important;
 }
 
-
-/* Invoice */
-
-.text-invoice{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn-facebook {
+  background-color: #3b5998 !important;
+  color: #fff !important;
 }
 
-.img-invoice{
-    width: 20rem;
+.btn-facebook:hover {
+  background-color: rgba(59, 89, 152, 0.55) !important;
 }
 
-/* Panier */
-.total-panier{
-    padding-left: 0.3rem;
+.btn-user {
+  font-size: 1rem !important;
+  border-radius: 10rem !important;
+  padding: 0.75rem 1rem !important;
+  width: 100% !important;
 }
 
-.panier{
-    position: relative;
-
-}
-.panier span{
-    position: absolute;
-    top: 3px;
-    margin-left: 3.8rem;
-    background: #FF4754;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    color:white ;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-/* Image formulaire edit-profil */
-.vich-image img{
-    border-radius: 1rem;
-    width: 22%;
-    margin-top: 1rem;
-
-}
-/* Admin */
-.admin-img {
-    width: 3.5rem;
-    border-radius: 0.2rem;
-}
-.img-admin-slider{
-    border-radius: 0.2rem;
-    width: 20rem;
-}
-
-/* Filterizer */
-.filtr-item img {
-    width: 100%;
-    height: auto;
-}
-
-.controls-filter {
-    margin-bottom: 26px;
-    color: red;
-}
 /* Footer */
 footer {
-    margin-top: 60px;
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
+  margin-top: 60px;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
 }
-
 footer h4 {
-    padding-bottom: 1.3rem;
-    color: #fff;
+  padding-bottom: 1.3rem;
+  color: #fff;
 }
-
 footer a {
-    padding: 1rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
 }
-
 footer a:hover {
-    text-decoration: none;
-    color: #fedfdf;
+  text-decoration: none;
+  color: #fedfdf;
 }

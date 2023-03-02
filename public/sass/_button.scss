@@ -1,0 +1,23 @@
+.btn-google {
+    background-color: $brand-google !important;
+    color: $white !important;
+}
+.btn-google:hover {
+    background-color: $brand-google-hover !important;
+}
+
+.btn-facebook {
+    background-color: $brand-facebook !important;
+    color: $white !important;
+}
+.btn-facebook:hover {
+    background-color: $brand-facebook-hover !important;
+}
+
+.btn-user  {
+    font-size: 1rem  !important;
+    border-radius: 10rem  !important;
+    padding: 0.75rem 1rem  !important;
+    width: 100%  !important;
+
+}
