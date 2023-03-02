@@ -31,6 +31,15 @@ class News
     #[ORM\Column]
     private ?\DateTimeImmutable $updatedAt = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $contentLong = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
+
+    #[ORM\Column]
+    private ?bool $IsPublished = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -92,6 +101,42 @@ class News
     public function setUpdatedAt(\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getContentLong(): ?string
+    {
+        return $this->contentLong;
+    }
+
+    public function setContentLong(string $contentLong): self
+    {
+        $this->contentLong = $contentLong;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function isIsPublished(): ?bool
+    {
+        return $this->IsPublished;
+    }
+
+    public function setIsPublished(bool $IsPublished): self
+    {
+        $this->IsPublished = $IsPublished;
 
         return $this;
     }
