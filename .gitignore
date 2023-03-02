@@ -14,7 +14,9 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
+###> PHPSTORM###
 /.idea/
+###< PHPSTORM###
 
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
