@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <section class="row">
+            <div class="col-md-8 offset-2">
+                <h2 class="display-4 my-4">S'enregistrer</h2>
+                {{ form_start(register) }}
+                {{ form_widget(register) }}
+
+{#                {{form_errors(register.captcha)}}#}
+
+                <button type="submit" class="btn btn-outline-secondary my-4">S'enregistrer</button>
+
+                {{ form_end(register) }}
+            </div>
+        </section>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <a href="{{ path('app_news')}}" class="mt-4 text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Retour au nouvelles</a>
+        <h1>{{ news.title|capitalize}}</h1>
+        <p>{{news.contentLong}}</p>
+
+    </div>
+
+
+{% endblock %}
+
+

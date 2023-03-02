@@ -15,7 +15,7 @@ class NewsFixtures extends Fixture
         $faker = Factory::create('fr_FR');
         $slug = new Slugify();
 
-        for ($i = 0; $i <= 35; $i++) {
+        for ($i = 1; $i <= 35; $i++) {
            $new = new News();
            $title = $faker->word($faker->numberBetween(3,5, true));
            $new->setTitle($title)

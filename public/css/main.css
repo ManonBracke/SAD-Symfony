@@ -1,4 +1,8 @@
 @import url("https://fonts.bunny.net/css?family=Nunito");
+.lien {
+  margin-left: 1rem;
+}
+
 .hero {
   padding-top: 30rem;
   min-height: 55rem;
