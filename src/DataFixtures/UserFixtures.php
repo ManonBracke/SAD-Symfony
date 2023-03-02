@@ -19,15 +19,14 @@ class UserFixtures extends Fixture
 
    public function load(ObjectManager $manager): void
     {
-        $faker = Factory::create('fr_FR');
-        $slug = new Slugify();
+        $faker = Factory::create('fr_BE');
 
         for($i =0 ; $i <=56; $i++){
            $user = new User();
            $user->setFirstname($faker->firstName())
                 ->setLastname($faker->lastName())
-                ->setUsername($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())))
-                ->setEmail($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())). '.'. $faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
+                ->setUsername(str_replace(' ','',strtolower($user->getFirstname())).'.'.str_replace(' ','',strtolower($user->getLastname())))
+                ->setEmail($user->getUsername().'.'.$faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
                 ->setPassword($this->hasher->hashPassword($user, 'password'))
                 ->setCreatedAt(new \DateTimeImmutable())
                 ->setUpdatedAt(new \DateTimeImmutable())
@@ -38,10 +37,10 @@ class UserFixtures extends Fixture
         }
 
         $user = new User();
-        $user->setFirstname($faker->firstName())
-            ->setLastname($faker->lastName())
-            ->setUsername($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())))
-            ->setEmail($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())). '.'. $faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
+        $user->setFirstname('Support')
+            ->setLastname('Support')
+            ->setUsername('Support')
+            ->setEmail($user->getUsername().'.'.$faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
             ->setPassword($this->hasher->hashPassword($user, 'password'))
             ->setCreatedAt(new \DateTimeImmutable())
             ->setUpdatedAt(new \DateTimeImmutable())
@@ -51,10 +50,10 @@ class UserFixtures extends Fixture
         $manager->persist($user);
 
         $user = new User();
-        $user->setFirstname($faker->firstName())
-            ->setLastname($faker->lastName())
-            ->setUsername($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())))
-            ->setEmail($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())). '.'. $faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
+        $user->setFirstname('Modérateur')
+            ->setLastname('Modérateur')
+            ->setUsername('Modérateur')
+            ->setEmail($user->getUsername().'.'.$faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
             ->setPassword($this->hasher->hashPassword($user, 'password'))
             ->setCreatedAt(new \DateTimeImmutable())
             ->setUpdatedAt(new \DateTimeImmutable())
@@ -64,10 +63,10 @@ class UserFixtures extends Fixture
         $manager->persist($user);
 
         $user = new User();
-        $user->setFirstname($faker->firstName())
-            ->setLastname($faker->lastName())
-            ->setUsername($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())))
-            ->setEmail($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())). '.'. $faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
+        $user->setFirstname('Admin')
+            ->setLastname('Admin')
+            ->setUsername('Admin')
+            ->setEmail($user->getUsername().'.'.$faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
             ->setPassword($this->hasher->hashPassword($user, 'password'))
             ->setCreatedAt(new \DateTimeImmutable())
             ->setUpdatedAt(new \DateTimeImmutable())
@@ -77,10 +76,10 @@ class UserFixtures extends Fixture
         $manager->persist($user);
 
         $user = new User();
-        $user->setFirstname($faker->firstName())
-            ->setLastname($faker->lastName())
-            ->setUsername($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())))
-            ->setEmail($slug->slugify($user->getFirstname(). '.' . $slug->slugify($user->getLastname())). '.'. $faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
+        $user->setFirstname('Super_Admin')
+            ->setLastname('Super_Admin')
+            ->setUsername('Super.Admin')
+            ->setEmail($user->getUsername().'.'.$faker->numberBetween(1000,9999) .'@'. $faker->freeEmailDomain())
             ->setPassword($this->hasher->hashPassword($user, 'password'))
             ->setCreatedAt(new \DateTimeImmutable())
             ->setUpdatedAt(new \DateTimeImmutable())
