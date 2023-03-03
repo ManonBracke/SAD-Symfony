@@ -19,7 +19,7 @@ class AdminUsersController extends AbstractController
            [],
            ['username'=>'DESC']
         );
-        return $this->render('admin/base.html.twig', [
+        return $this->render('admin/users/user.html.twig', [
             'users'=>$users,
         ]);
     }

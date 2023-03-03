@@ -38,7 +38,7 @@ class News
     private ?string $slug = null;
 
     #[ORM\Column]
-    private ?bool $IsPublished = null;
+    private ?bool $isPublished = null;
 
     public function getId(): ?int
     {
@@ -131,12 +131,12 @@ class News
 
     public function isIsPublished(): ?bool
     {
-        return $this->IsPublished;
+        return $this->isPublished;
     }
 
     public function setIsPublished(bool $IsPublished): self
     {
-        $this->IsPublished = $IsPublished;
+        $this->isPublished = $IsPublished;
 
         return $this;
     }

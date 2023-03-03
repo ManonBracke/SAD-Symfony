@@ -1,0 +1,38 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}News{{ parent() }}{% endblock %}
+{% block body %}
+    <h4 class="my-5 text-muted">Gestion des nouvelles</h4>
+    <table id="table-admin" class="table table-hover">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Création</th>
+            <th>Visible</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for new in news %}
+            <tr>
+                <td><img src="{{ asset('img/news/') ~ new.imageName }}"  alt="{{ new.title }}" class="admin-img"></td>
+                <td>{{ new.title }}</td>
+                <td>{{ new.content }}</td>
+                <td>{{ new.createdAt|date('d/m/Y') }}</td>
+                <td>
+                    <a href="{{ path('app_admin_view_news', {'id': new.id})}}" class="btn btn-light">
+                        {% if new.IsPublished %}
+                            <i class="fa-solid fa-eye-slash"></i>
+                        {% else %}
+                            <i class="fa-solid fa-eye"></i>
+                        {% endif %}
+                    </a>
+                </td>
+                <td></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

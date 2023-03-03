@@ -6,7 +6,7 @@
     <table id="table-admin" class="table table-hover">
         <thead>
         <tr>
-            <th>Image</th>
+{#            <th>Image</th>#}
             <th>Pseudo</th>
             <th>Nom</th>
             <th>Prénom</th>
@@ -18,15 +18,15 @@
         <tbody>
         {% for user in users %}
             <tr>
-                <td><img src="{{ asset('img/avatar/') ~ user.imageName }}"  alt="{{ user.firstName }} {{ user.lastName }}" class="admin-img"></td>
+{#                <td><img src="{{ asset('img/avatar/') ~ user.imageName }}"  alt="{{ user.firstName }} {{ user.lastName }}" class="admin-img"></td>#}
                 <td>{{ user.username }}</td>
                 <td>{{ user.lastName }}</td>
                 <td>{{ user.firstName }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.birthday }}</td>
+                <td>{{ user.birthday|date('d/m/Y') }}</td>
                 <td>
                     <a href="{{ path('app_admin_view_user', {'id': user.id})}}" class="btn btn-light">
-                        {% if user.isDisabled %}
+                        {% if user.isDesactivated %}
                             <i class="fa-solid fa-eye-slash"></i>
                         {% else %}
                             <i class="fa-solid fa-eye"></i>

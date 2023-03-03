@@ -33,6 +33,11 @@
   width: 100% !important;
 }
 
+.admin-img {
+  width: 3.5rem;
+  border-radius: 0.2rem;
+}
+
 /* Footer */
 footer {
   margin-top: 60px;
